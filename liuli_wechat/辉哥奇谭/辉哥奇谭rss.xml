@@ -6,11 +6,16 @@
     <description>公众号描述</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
-    <lastBuildDate>Sun, 04 Sep 2022 15:42:50 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Sep 2022 17:10:42 +0000</lastBuildDate>
     <item>
-      <title>辉哥奇谭更新表演</title>
-      <link>https://weixin.sogou.com/weixin?type=1&amp;s_from=input&amp;query=辉哥奇谭&amp;ie=utf8&amp;_sug_=n&amp;_sug_type_=</link>
-      <guid isPermaLink="false">https://weixin.sogou.com/weixin?type=1&amp;s_from=input&amp;query=辉哥奇谭&amp;ie=utf8&amp;_sug_=n&amp;_sug_type_=</guid>
+      <title>辉哥奇谭rss.xml</title>
+      <link>https://Psinary.github.io/liuli_backup/liuli_wechat/辉哥奇谭/辉哥奇谭rss.xml</link>
+      <guid isPermaLink="false">https://Psinary.github.io/liuli_backup/liuli_wechat/辉哥奇谭/辉哥奇谭rss.xml</guid>
+    </item>
+    <item>
+      <title>2022年8月文章目录.html</title>
+      <link>https://Psinary.github.io/liuli_backup/liuli_wechat/辉哥奇谭/2022年8月文章目录.html</link>
+      <guid isPermaLink="false">https://Psinary.github.io/liuli_backup/liuli_wechat/辉哥奇谭/2022年8月文章目录.html</guid>
     </item>
   </channel>
 </rss>

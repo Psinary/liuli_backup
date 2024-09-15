@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>米哈游表情库</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #data-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 自定义列数 */
+            gap: 10px; /* 设置网格间距 */
+            padding: 10px;
+            box-sizing: border-box;
+            height: 100vh; /* Full viewport height */
+            overflow: auto; /* Ensure scroll if content overflows */
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            height: 200px; /* Increased height for image and text */
+            text-align: center;
+        }
+        .item img {
+            width: 100%;
+            height: 120px; /* Fixed height for images */
+            object-fit: cover; /* Ensures the image covers the container without distortion */
+        }
+        .item .title {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #333; /* Text color */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">米哈游表情库</h1>
+    <h4 style="text-align: center;">Ctrl + F 直接搜索表情，然后复制使用表情。</h14>
+    <p style="text-align: center;">PS:暂时使用的米忽悠的图源，为防止挂掉可以换自己的图源。</p>
+    <h4 style="text-align: center;"></h14>
+
+
+    <div id="data-container"></div>
+    <!-- 米哈游表情库 -->
+
+    <script>
+        // URL of the JSON data
+        const jsonUrl = 'https://bbs-api-static.miyoushe.com/misc/api/emoticon_set'; // 替换为实际 JSON 数据的 URL
+
+        // Function to fetch JSON data and display it
+        async function fetchAndDisplayData() {
+            try {
+                const response = await fetch(jsonUrl);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                displayData(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        // Function to display data on the page
+        function displayData(data) {
+            const container = document.getElementById('data-container');
+
+            if (data && data.data && data.data.list) {
+                data.data.list.forEach(item => {
+                    if (item.list && item.list.length > 0) {
+                        item.list.forEach(subItem => {
+                            const itemDiv = document.createElement('div');
+                            itemDiv.classList.add('item');
+
+                            const img = document.createElement('img');
+                            img.src = subItem.icon || 'https://via.placeholder.com/150'; // 默认图像
+                            img.alt = subItem.name || 'No image';
+
+                            const title = document.createElement('div');
+                            title.classList.add('title');
+                            title.textContent = subItem.name || 'No name'; // 默认标题
+
+                            itemDiv.appendChild(img);
+                            itemDiv.appendChild(title);
+                            container.appendChild(itemDiv);
+                        });
+                    }
+                });
+            } else {
+                container.textContent = 'No data available';
+            }
+        }
+
+        // Call the function to fetch and display data
+        fetchAndDisplayData();
+    </script>
+</body>
+</html>

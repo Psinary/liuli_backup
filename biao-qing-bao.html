@@ -35,6 +35,10 @@
             display: inline-block;
         }
 
+        p {
+            line-height: 0.5;
+        }
+
         #data-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -109,8 +113,8 @@
 <body>
     <header>
         <h1>米哈游表情库</h1>
-        <p><kbd>Ctrl</kbd>+<kbd>F</kbd> 搜索表情，直接复制使用。</p>
-        <p>PS：暂用官方图源，以后自建，有其他问题 <a href="https://github.com/Psinary/liuli_backup/issues" target="_blank">点这里留言！</a></p>
+        <p style=><kbd>Ctrl</kbd>+<kbd>F</kbd> 搜索表情，直接复制使用。</p>
+        <p style=>如有其他问题 <a href="https://github.com/Psinary/liuli_backup/issues" target="_blank">点这里留言！</a></p>
     </header>
 
     <div id="data-container"></div>

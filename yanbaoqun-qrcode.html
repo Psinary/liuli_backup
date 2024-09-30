@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <title>二维码展示</title>
+</head>
+<body>
+    <div class="container" style="text-align: center; max-width: 720px; margin: 0 auto;">
+        <!-- 图床配置展示 -->
+        <img src="https://baigebg.com/usr/uploads/2024/09/3242215490.jpeg" alt="描述文本" style="display: block; margin: 0 auto; width: 350px; height: auto;">
+        <p style="color: #3f3f3f; line-height: 1.75; letter-spacing: 1px; font-size: 15px;  word-break:break-all;">使用微信订阅碎片信息研报： <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI1NzYzMDE2MA==&action=getalbum&album_id=2396534678049685504#wechat_redirect" target="_blank">点我查看</a> </p>
+
+    </br>
+
+        <div id="qrcode" style="text-align: center; display: flex; justify-content: center;"></div>
+
+    </div>
+
+    <script>
+        // 使用qrcode.js生成二维码
+        // var qrcode = new QRCode(document.getElementById("qrcode"), {
+        //     text: "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI1NzYzMDE2MA==&action=getalbum&album_id=2396534678049685504#wechat_redirect", // 指定要编码的链接
+        //     width: 200, // 二维码的宽度
+        //     height: 200 // 二维码的高度
+            
+        // });
+    </script>
+</body>
+</html>
